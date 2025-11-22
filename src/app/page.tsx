@@ -67,7 +67,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative z-10 h-full w-full p-6">
+        <div className="relative z-10 flex h-full w-full flex-col items-start justify-center p-6">
           <div className="flex w-fit flex-1 flex-col justify-start pt-8 lg:flex-none lg:justify-center lg:pt-0">
             <motion.div
               className="relative flex h-32 w-64 flex-col items-center lg:h-64 lg:w-[580px]"
@@ -128,7 +128,7 @@ export default function Home() {
           </div>
 
           <motion.div
-            className="mt-4 hidden w-[580px] justify-center self-center lg:flex"
+            className="mt-4 hidden w-[580px] justify-end lg:flex"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.4, duration: 0.8 }}
