@@ -8,3 +8,4 @@ export * from "./bottom-decoration";
 export * from "./participation-modal";
 export * from "./input";
 export * from "./select";
+export * from "./participation-trigger";

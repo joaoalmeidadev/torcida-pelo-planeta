@@ -1,24 +1,17 @@
-"use client";
-
-import { useState } from "react";
-
 import { Container } from "@/components/layout";
 import {
   BottomDecoration,
-  Button,
   HeroDescription,
   HeroTitle,
-  ParticipationModal,
+  ParticipationTrigger,
   PartnersLogos,
   PrizeShowcase,
   VideoPlayer,
 } from "@/components/ui";
 
 export default function Home() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   return (
-    <div className="pt-header-height relative h-full min-h-screen w-full bg-[url('/background.avif')] bg-cover bg-center">
+    <div className="pt-header-height bg-brand-green relative h-full min-h-screen w-full bg-[url('/background.avif')] bg-cover bg-center">
       <BottomDecoration />
 
       <Container className="flex justify-between gap-10 pb-10">
@@ -28,9 +21,7 @@ export default function Home() {
             <HeroDescription />
           </div>
 
-          <Button className="max-w-[360px]" onClick={() => setIsModalOpen(true)}>
-            Clique e participe
-          </Button>
+          <ParticipationTrigger />
 
           <PartnersLogos />
         </div>
@@ -40,8 +31,6 @@ export default function Home() {
           <VideoPlayer />
         </div>
       </Container>
-
-      <ParticipationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }
