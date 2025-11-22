@@ -91,7 +91,7 @@ export default function MinhasDoacoes() {
         <>
           <Header variant="search-results" onBackClick={handleBack} />
           <div className="bg-brand-green relative h-full min-h-screen w-full bg-[url('/background.avif')] bg-cover bg-center">
-            <div className="flex h-full min-h-screen w-full items-center justify-center bg-black/0 backdrop-blur-md">
+            <div className="flex h-full min-h-screen w-full items-center justify-center bg-black/1 backdrop-blur-md">
               <DonationsTable donations={donations} />
             </div>
           </div>

@@ -9,7 +9,7 @@ export function Button({ children, className, ...props }: ButtonProps) {
   return (
     <button
       className={cn(
-        "bg-brand-yellow-light text-brand-green w-full cursor-pointer rounded-[8px] p-4 text-xl leading-[120%] uppercase lg:min-w-[360px]",
+        "font-CCGibbonsGazette bg-brand-yellow-light text-brand-green w-full cursor-pointer rounded-[8px] p-4 text-xl leading-[120%] uppercase lg:min-w-[360px]",
         "relative overflow-hidden transition-colors duration-300 ease-in-out",
         "hover:text-brand-yellow-light",
         "before:bg-brand-green before:absolute before:inset-[-2px] before:-translate-x-full before:transition-transform before:duration-300 before:ease-out",

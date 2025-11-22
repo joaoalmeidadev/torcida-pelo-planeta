@@ -11,7 +11,7 @@ export function PromoInfoFields({ formData, setFormData }: PromoInfoFieldsProps)
   return (
     <div className="bg-brand-yellow-light space-y-6 rounded-3xl p-6 md:p-8">
       <div className="space-y-4">
-        <h3 className="text-brand-green text-xl leading-tight font-black uppercase">
+        <h3 className="font-CCGibbonsGazette text-brand-green text-xl leading-tight font-black uppercase">
           Você pode batizar o novo mascote da Torcida pelo Planeta.
         </h3>
         <p className="text-brand-green/80 text-sm leading-relaxed font-medium">

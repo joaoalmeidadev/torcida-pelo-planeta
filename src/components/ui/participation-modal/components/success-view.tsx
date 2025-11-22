@@ -7,7 +7,7 @@ interface SuccessViewProps {
 export function SuccessView({ onClose }: SuccessViewProps) {
   return (
     <div className="flex flex-col items-center justify-center space-y-6 py-12 text-center">
-      <h2 className="text-brand-green text-3xl leading-tight font-black uppercase md:text-5xl">
+      <h2 className="font-CCGibbonsGazette text-brand-green text-3xl leading-tight font-black uppercase md:text-5xl">
         Envio realizado
         <br />
         com sucesso!

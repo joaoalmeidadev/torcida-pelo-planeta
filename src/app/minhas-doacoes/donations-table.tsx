@@ -21,16 +21,16 @@ interface DonationsTableProps {
 export function DonationsTable({ donations }: DonationsTableProps) {
   return (
     <div className="flex w-full max-w-[900px] flex-col gap-4">
-      <h2 className="text-center text-2xl font-bold text-white uppercase">
+      <h2 className="font-CCGibbonsGazette text-center text-2xl font-bold text-white uppercase">
         Listagem das suas doações
       </h2>
       <div className="w-full overflow-hidden rounded-t-[16px]">
         <table className="w-full text-left text-sm">
-          <thead className="h-[72px] bg-[#167A124D] text-white uppercase">
+          <thead className="font-CCGibbonsGazette h-[72px] bg-[#167A124D] text-white uppercase">
             <tr>
-              <th className="p-4 font-bold">Nome</th>
-              <th className="p-4 font-bold">Dia</th>
-              <th className="p-4 font-bold">Nome da muda</th>
+              <th className="p-4 text-xl">Nome</th>
+              <th className="p-4 text-xl">Dia</th>
+              <th className="p-4 text-xl">Nome da muda</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-white/10 text-white/90">

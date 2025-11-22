@@ -5,6 +5,7 @@
 
 @theme {
   --font-sans: var(--font-inter);
+  --font-CCGibbonsGazette: var(--font-CCGibbonsGazette);
   --color-brand-yellow-light: #f3d03d;
   --color-brand-green: #004101;
   --color-brand-green-light: #458f71;

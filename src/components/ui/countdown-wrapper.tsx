@@ -13,7 +13,7 @@ interface CountdownWrapperProps {
 }
 
 export function CountdownWrapper({ children }: CountdownWrapperProps) {
-  const [count, setCount] = useState(5);
+  const [count, setCount] = useState(3);
   const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export function CountdownWrapper({ children }: CountdownWrapperProps) {
             transition={{ duration: 0.5 }}
             className="flex h-full min-h-screen w-full flex-col items-center justify-center px-4 text-center"
           >
-            <h2 className="mt-12 mb-10 text-center text-2xl leading-[120%] text-white uppercase md:text-[34px]">
+            <h2 className="font-CCGibbonsGazette mt-12 mb-10 text-center text-2xl leading-[120%] text-white uppercase md:text-[34px]">
               Obrigado por fazer a <br />{" "}
               <span className="relative inline-block">
                 <span className="text-brand-green relative z-10 text-[60px] leading-[120%] md:text-[86px]">
@@ -56,7 +56,7 @@ export function CountdownWrapper({ children }: CountdownWrapperProps) {
               </span>
             </h2>
 
-            <p className="mb-8 max-w-[600px] font-sans text-sm leading-relaxed font-medium text-white uppercase md:text-lg">
+            <p className="font-CCGibbonsGazette mb-8 max-w-[600px] text-sm leading-relaxed font-medium text-white uppercase md:text-lg">
               Você está prestes a acessar a página que pode te levar a um verdadeiro tesouro do
               futebol:{" "}
               <span className="text-brand-yellow-light">
@@ -71,13 +71,13 @@ export function CountdownWrapper({ children }: CountdownWrapperProps) {
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 1.5, opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="text-brand-green font-sans text-5xl font-black md:text-6xl"
+                className="font-CCGibbonsGazette text-brand-green text-5xl font-black md:text-6xl"
               >
                 {count}
               </motion.span>
             </div>
 
-            <p className="mb-8 max-w-[600px] font-sans text-xs leading-relaxed font-medium text-white uppercase md:text-sm">
+            <p className="font-CCGibbonsGazette mb-8 max-w-[600px] text-xs leading-relaxed font-medium text-white uppercase md:text-sm">
               Uma peça única, rara e assinada por um dos jogadores mais decisivos do planeta. Não
               perca essa chance.
             </p>
