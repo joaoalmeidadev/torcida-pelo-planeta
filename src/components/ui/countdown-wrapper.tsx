@@ -60,7 +60,7 @@ export function CountdownWrapper({ children }: CountdownWrapperProps) {
               Você está prestes a acessar a página que pode te levar a um verdadeiro tesouro do
               futebol:{" "}
               <span className="text-brand-yellow-light">
-                uma camisa oficial da seleção brasileira autografada pelo Vini Jr.
+                uma camisa oficial da seleção brasileira autografada pelo Bruno Guimarães.
               </span>
             </p>
 

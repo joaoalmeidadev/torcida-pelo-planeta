@@ -20,7 +20,7 @@ export function PromoInfoFields({ formData, setFormData }: PromoInfoFieldsProps)
         </p>
         <p className="text-brand-green/80 text-sm leading-relaxed font-medium">
           E mais: se o seu nome for escolhido, você ganha uma camisa oficial da Seleção Brasileira
-          autografada pelo Vini Jr.
+          autografada pelo Bruno Guimarães.
         </p>
       </div>
 
