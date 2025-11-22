@@ -30,7 +30,7 @@ export default function Home() {
             href="https://taca.benfeitoria.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-brand-yellow-light flex items-center justify-center gap-2 text-center"
+            className="text-brand-yellow-light flex items-center justify-center gap-2 text-center lg:hidden"
           >
             <span className="hover:underline">Acesse o site Para Quem Doar</span>
             <Image
