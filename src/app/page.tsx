@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { Container } from "@/components/layout";
+import { Container, Header } from "@/components/layout";
 import {
   BottomDecoration,
   CountdownWrapper,
@@ -15,6 +15,7 @@ import {
 export default function Home() {
   return (
     <div className="pt-header-height bg-brand-green relative h-full min-h-screen w-full bg-[url('/background.avif')] bg-cover bg-center">
+      <Header />
       <CountdownWrapper>
         <BottomDecoration />
         <Image

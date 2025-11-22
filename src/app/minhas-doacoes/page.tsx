@@ -3,10 +3,11 @@
 import { useState } from "react";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import { BACKEND_URL } from "@/constants/environments";
 
-import { Container } from "@/components/layout";
+import { Container, Header } from "@/components/layout";
 import { Button, Input, PartnersLogos } from "@/components/ui";
 
 import { Donation, DonationsTable } from "./donations-table";
@@ -41,19 +42,27 @@ export default function MinhasDoacoes() {
     }
   };
 
+  const handleBack = () => {
+    setHasSearched(false);
+    setDonations([]);
+    setEmail("");
+  };
+
   return (
     <>
       {!hasSearched ? (
-        <div className="pt-header-height bg-brand-green relative h-full min-h-screen w-full bg-[url('/background.avif')] bg-cover bg-center">
+        <div className="bg-brand-green relative h-full min-h-screen w-full bg-[url('/background.avif')] bg-cover bg-center">
           <Container className="mt-16 flex flex-col items-center justify-center gap-16 pb-10">
-            <Image
-              src="/logotipo-large.png"
-              alt="Torcida pelo Planeta"
-              width={278}
-              height={108}
-              className="object-contain"
-              priority
-            />
+            <Link href="/">
+              <Image
+                src="/logotipo-large.png"
+                alt="Torcida pelo Planeta"
+                width={278}
+                height={108}
+                className="object-contain"
+                priority
+              />
+            </Link>
 
             <form onSubmit={handleSearch} className="flex w-full max-w-[480px] flex-col gap-6">
               <div className="space-y-2">
@@ -79,11 +88,14 @@ export default function MinhasDoacoes() {
           </Container>
         </div>
       ) : (
-        <div className="bg-brand-green relative h-full min-h-screen w-full bg-[url('/background.avif')] bg-cover bg-center">
-          <div className="flex h-full min-h-screen w-full items-center justify-center bg-black/0 backdrop-blur-md">
-            <DonationsTable donations={donations} />
+        <>
+          <Header variant="search-results" onBackClick={handleBack} />
+          <div className="bg-brand-green relative h-full min-h-screen w-full bg-[url('/background.avif')] bg-cover bg-center">
+            <div className="flex h-full min-h-screen w-full items-center justify-center bg-black/0 backdrop-blur-md">
+              <DonationsTable donations={donations} />
+            </div>
           </div>
-        </div>
+        </>
       )}
     </>
   );
