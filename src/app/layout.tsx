@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 
+import { Header } from "@/components/layout";
+
 import "./globals.css";
 
 const inter = Inter({
@@ -36,6 +38,7 @@ export default function RootLayout({
             gtag('config', 'G-QFNHCCHXH0');
           `}
         </Script>
+        <Header />
         <main className="flex min-h-screen flex-1 flex-col overflow-x-hidden">{children}</main>
       </body>
     </html>

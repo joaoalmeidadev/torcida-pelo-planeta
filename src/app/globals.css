@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-inter); 
-  --color-brand-yellow: #FFFF00;
-  --color-brand-green: #009C3B;
-  --color-box-green: #37761C;
+  --font-sans: var(--font-inter);
+  --color-brand-yellow: #ffff00;
+  --color-brand-yellow-light: #f3d03d;
+  --color-brand-green: #009c3b;
+  --color-box-green: #37761c;
+  --color-black-transparent: #00000050;
+
+  --spacing-header-height: 100px;
 }
