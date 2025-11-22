@@ -67,10 +67,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative z-10 flex h-full w-full flex-1 flex-col justify-between p-6 lg:justify-center lg:p-12">
-          <div className="flex flex-1 flex-col justify-start pt-8 lg:flex-none lg:justify-center lg:pt-0">
+        <div className="relative z-10 h-full w-full p-6">
+          <div className="flex w-fit flex-1 flex-col justify-start pt-8 lg:flex-none lg:justify-center lg:pt-0">
             <motion.div
-              className="relative h-32 w-64 lg:h-64 lg:w-[580px]"
+              className="relative flex h-32 w-64 flex-col items-center lg:h-64 lg:w-[580px]"
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.2, delay: 0.3 }}
@@ -82,6 +82,23 @@ export default function Home() {
                 height={315}
                 className="object-contain object-left"
               />
+            </motion.div>
+
+            <motion.div
+              className="mt-2 mb-6 flex w-[200px] justify-center self-center lg:hidden"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.4, duration: 0.8 }}
+            >
+              <a
+                href="https://taca.benfeitoria.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Doe agora"
+                className="bg-brand-yellow text-brand-green w-full max-w-[200px] rounded-full py-4 text-center text-xs font-black uppercase shadow-[0_4px_14px_0_rgba(0,0,0,0.39)] transition-colors hover:bg-[#ffeb3b]"
+              >
+                Doe Agora!
+              </a>
             </motion.div>
           </div>
 
@@ -109,6 +126,23 @@ export default function Home() {
               />
             </motion.div>
           </div>
+
+          <motion.div
+            className="mt-4 hidden w-[580px] justify-center self-center lg:flex"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.4, duration: 0.8 }}
+          >
+            <a
+              href="https://taca.benfeitoria.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Doe agora"
+              className="bg-brand-yellow text-brand-green w-full max-w-[320px] rounded-full py-4 text-center text-xl font-black uppercase shadow-[0_4px_14px_0_rgba(0,0,0,0.39)] transition-colors hover:bg-[#ffeb3b] lg:w-auto lg:px-16"
+            >
+              Doe Agora!
+            </a>
+          </motion.div>
         </div>
 
         <div className="bg-brand-yellow absolute right-0 bottom-0 left-0 z-10 h-2 w-full lg:h-[25px]"></div>
