@@ -33,6 +33,18 @@ export function ParticipationModal({ isOpen, onClose }: ParticipationModalProps)
     setMounted(true);
   }, []);
 
+  React.useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Add validation if needed
@@ -86,7 +98,7 @@ export function ParticipationModal({ isOpen, onClose }: ParticipationModalProps)
                 </button>
               </div>
 
-              <div className="relative z-10 w-full overflow-hidden rounded-t-3xl">
+              <div className="relative z-10 h-10 w-full overflow-hidden rounded-t-3xl">
                 <div className="bg-brand-green-light h-3 min-h-3 w-full" />
                 <div className="bg-brand-yellow-light h-3 min-h-3 w-full" />
               </div>
