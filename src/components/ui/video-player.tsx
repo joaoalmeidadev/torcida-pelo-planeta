@@ -132,12 +132,19 @@ export function VideoPlayer() {
       <video
         ref={videoRef}
         className="h-full w-full object-cover"
-        src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
         poster="/video-thumbnail.png"
         onTimeUpdate={handleTimeUpdate}
         onEnded={() => setIsPlaying(false)}
         onClick={togglePlay}
-      />
+        playsInline
+      >
+        <source
+          src="/Video%20Comercial%20TPI%20CBF%20Vertical.mp4"
+          type="video/mp4"
+          media="(max-width: 768px)"
+        />
+        <source src="/Video%20Conceito%20TPI%20CBF%20Final%20.mp4" type="video/mp4" />
+      </video>
 
       {!isPlaying && (
         <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/20 transition-opacity">
