@@ -4,7 +4,7 @@ import { Container } from "./container";
 
 export function Header() {
   return (
-    <header className="bg-black-transparent h-header-height fixed top-0 right-0 left-0 z-40">
+    <header className="bg-black-transparent h-header-height fixed top-0 right-0 left-0 z-40 backdrop-blur-xs">
       <Container className="relative flex h-full items-center justify-center">
         <Image
           src="/logotipo.png"
