@@ -48,44 +48,88 @@ export default function Home() {
           />
         </motion.div>
 
-        <div className="absolute inset-0 z-10 flex items-end justify-end">
-          <div className="relative h-full w-full md:h-full md:w-1/2">
-            <motion.div
-              className="relative h-full w-full"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1.5, delay: 0.5 }}
-            >
-              <Image
-                src="/men-background-1.png"
-                alt="Torcedor com vuvuzela"
-                fill
-                className="object-contain object-bottom md:object-bottom-right"
-                priority
-              />
-            </motion.div>
+        <div className="relative mx-auto h-full w-full max-w-[1380px]">
+          <div className="absolute inset-0 z-10 flex items-end justify-end">
+            <div className="relative h-full w-full md:h-full md:w-1/2">
+              <motion.div
+                className="relative h-full w-full"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1.5, delay: 0.5 }}
+              >
+                <Image
+                  src="/men-background-1.png"
+                  alt="Torcedor com vuvuzela"
+                  fill
+                  className="object-contain object-bottom-right"
+                  priority
+                />
+              </motion.div>
+            </div>
           </div>
-        </div>
 
-        <div className="relative z-10 flex h-full w-full flex-col items-start justify-center p-6">
-          <div className="flex w-fit flex-1 flex-col justify-start pt-8 lg:flex-none lg:justify-center lg:pt-0">
-            <motion.div
-              className="relative flex h-32 w-64 flex-col items-center lg:h-64 lg:w-[580px]"
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1.2, delay: 0.3 }}
-            >
-              <Image
-                src="/logotipo.png"
-                alt="Torcida pelo Planeta"
-                width={560}
-                height={315}
-                className="object-contain object-left"
-              />
-            </motion.div>
+          <div className="relative z-10 flex h-full w-full flex-col items-start justify-center p-6">
+            <div className="flex w-fit flex-1 flex-col justify-start pt-8 lg:flex-none lg:justify-center lg:pt-0">
+              <motion.div
+                className="relative flex h-32 w-64 flex-col items-center lg:h-64 lg:w-[580px]"
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1.2, delay: 0.3 }}
+              >
+                <Image
+                  src="/logotipo.png"
+                  alt="Torcida pelo Planeta"
+                  width={560}
+                  height={315}
+                  className="object-contain object-left"
+                />
+              </motion.div>
+
+              <motion.div
+                className="mt-2 mb-6 flex w-[200px] justify-center self-center lg:hidden"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.4, duration: 0.8 }}
+              >
+                <a
+                  href="https://taca.benfeitoria.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Doe agora"
+                  className="bg-brand-yellow text-brand-green w-full max-w-[200px] rounded-full py-4 text-center text-xs font-black uppercase shadow-[0_4px_14px_0_rgba(0,0,0,0.39)] transition-colors hover:bg-[#ffeb3b]"
+                >
+                  Doe Agora!
+                </a>
+              </motion.div>
+            </div>
+
+            <div className="mb-8 flex flex-col gap-3 lg:mb-0 lg:w-[580px] lg:flex-col-reverse lg:items-end">
+              <motion.p
+                className="text-[10px] font-bold text-white uppercase lg:text-right lg:text-lg"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1 }}
+              >
+                Ação Oficial: CBF / Taça dos Povos Indígenas / Paraquemdoar
+              </motion.p>
+              <motion.div
+                className="relative h-12 w-48 lg:h-20 lg:w-80"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.2, duration: 0.8 }}
+              >
+                <Image
+                  src="/partners-logo.png"
+                  alt="Parceiros"
+                  width={305}
+                  height={91}
+                  className="object-contain object-left lg:object-right"
+                />
+              </motion.div>
+            </div>
 
             <motion.div
-              className="mt-2 mb-6 flex w-[200px] justify-center self-center lg:hidden"
+              className="mt-4 hidden w-[580px] items-center justify-end gap-6 lg:flex"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.4, duration: 0.8 }}
@@ -95,68 +139,26 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Doe agora"
-                className="bg-brand-yellow text-brand-green w-full max-w-[200px] rounded-full py-4 text-center text-xs font-black uppercase shadow-[0_4px_14px_0_rgba(0,0,0,0.39)] transition-colors hover:bg-[#ffeb3b]"
+                className="bg-brand-yellow text-brand-green w-full max-w-[320px] rounded-full py-4 text-center text-xl font-black uppercase shadow-[0_4px_14px_0_rgba(0,0,0,0.39)] transition-colors hover:bg-[#ffeb3b] lg:w-auto lg:px-16"
               >
                 Doe Agora!
               </a>
+              <div className="flex flex-col items-center gap-2">
+                <Image
+                  src="/qr-code.svg"
+                  alt="QR Code para doação"
+                  width={90}
+                  height={90}
+                  className="rounded-md object-contain"
+                />
+                <p className="max-w-[100px] text-center text-xs leading-tight text-white">
+                  Aponte o celular
+                  <br />
+                  para o QRCODE
+                </p>
+              </div>
             </motion.div>
           </div>
-
-          <div className="mb-8 flex flex-col gap-3 lg:mb-0 lg:w-[580px] lg:flex-col-reverse lg:items-end">
-            <motion.p
-              className="text-[10px] font-bold text-white uppercase lg:text-right lg:text-lg"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1 }}
-            >
-              Ação Oficial: CBF / Taça dos Povos Indígenas / Paraquemdoar
-            </motion.p>
-            <motion.div
-              className="relative h-12 w-48 lg:h-20 lg:w-80"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.2, duration: 0.8 }}
-            >
-              <Image
-                src="/partners-logo.png"
-                alt="Parceiros"
-                width={305}
-                height={91}
-                className="object-contain object-left lg:object-right"
-              />
-            </motion.div>
-          </div>
-
-          <motion.div
-            className="mt-4 hidden w-[580px] items-center justify-end gap-6 lg:flex"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.4, duration: 0.8 }}
-          >
-            <a
-              href="https://taca.benfeitoria.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Doe agora"
-              className="bg-brand-yellow text-brand-green w-full max-w-[320px] rounded-full py-4 text-center text-xl font-black uppercase shadow-[0_4px_14px_0_rgba(0,0,0,0.39)] transition-colors hover:bg-[#ffeb3b] lg:w-auto lg:px-16"
-            >
-              Doe Agora!
-            </a>
-            <div className="flex flex-col items-center gap-2">
-              <Image
-                src="/qr-code.svg"
-                alt="QR Code para doação"
-                width={90}
-                height={90}
-                className="rounded-md object-contain"
-              />
-              <p className="max-w-[100px] text-center text-xs leading-tight text-white">
-                Aponte o celular
-                <br />
-                para o QRCODE
-              </p>
-            </div>
-          </motion.div>
         </div>
 
         <div className="bg-brand-yellow absolute right-0 bottom-0 left-0 z-10 h-2 w-full lg:h-[25px]"></div>
