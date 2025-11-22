@@ -68,7 +68,7 @@ export default function Home() {
         <div className="relative z-10 flex h-full w-full flex-1 flex-col justify-between p-6 md:justify-center md:p-12">
           <div className="flex flex-1 flex-col justify-start pt-8 md:flex-none md:justify-center md:pt-0">
             <motion.div
-              className="relative h-32 w-64 md:h-56 md:w-[500px]"
+              className="relative h-32 w-64 md:h-64 md:w-[580px]"
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.2, delay: 0.3 }}
@@ -83,9 +83,9 @@ export default function Home() {
             </motion.div>
           </div>
 
-          <div className="mb-8 flex flex-col gap-3 md:mb-0 md:w-[500px] md:flex-col-reverse md:items-end">
+          <div className="mb-8 flex flex-col gap-3 md:mb-0 md:w-[580px] md:flex-col-reverse md:items-end">
             <motion.p
-              className="text-[10px] font-bold text-white uppercase md:text-right md:text-sm"
+              className="text-[10px] font-bold text-white uppercase md:text-right md:text-lg"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1 }}
@@ -93,7 +93,7 @@ export default function Home() {
               Ação Oficial: CBF / Taça dos Povos Indígenas / Paraquemdoar
             </motion.p>
             <motion.div
-              className="relative h-12 w-48 md:h-16 md:w-64"
+              className="relative h-12 w-48 md:h-20 md:w-80"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.8 }}
