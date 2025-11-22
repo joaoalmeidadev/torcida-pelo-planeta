@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { createPortal } from "react-dom";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
@@ -18,6 +19,7 @@ interface ParticipationModalProps {
 
 export function ParticipationModal({ isOpen, onClose }: ParticipationModalProps) {
   const [isSuccess, setIsSuccess] = React.useState(false);
+  const [mounted, setMounted] = React.useState(false);
   const [formData, setFormData] = React.useState<ParticipationFormData>({
     name: "",
     email: "",
@@ -26,6 +28,10 @@ export function ParticipationModal({ isOpen, onClose }: ParticipationModalProps)
     plantName: "",
     termsAccepted: false,
   });
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,7 +52,9 @@ export function ParticipationModal({ isOpen, onClose }: ParticipationModalProps)
     onClose();
   };
 
-  return (
+  if (!mounted) return null;
+
+  return createPortal(
     <AnimatePresence>
       {isOpen && (
         <>
@@ -100,6 +108,7 @@ export function ParticipationModal({ isOpen, onClose }: ParticipationModalProps)
           </div>
         </>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 }
