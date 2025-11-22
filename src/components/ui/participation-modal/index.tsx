@@ -69,7 +69,7 @@ export function ParticipationModal({ isOpen, onClose }: ParticipationModalProps)
               <div className="absolute -top-7 left-1/2 z-10 -translate-x-1/2">
                 <button
                   onClick={handleClose}
-                  className="bg-brand-green-light flex items-center gap-2 rounded-t-xl px-6 py-2 text-sm font-bold text-white uppercase shadow-lg"
+                  className="bg-brand-green-light flex cursor-pointer items-center gap-2 rounded-t-xl px-6 py-2 text-sm font-bold text-white uppercase shadow-lg"
                 >
                   <div className="rounded-full bg-white p-0.5">
                     <X className="text-brand-green-light size-3" strokeWidth={4} />
