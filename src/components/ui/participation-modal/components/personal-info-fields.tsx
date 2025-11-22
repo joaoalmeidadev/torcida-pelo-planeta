@@ -15,18 +15,26 @@ interface PersonalInfoFieldsProps {
 }
 
 const TEAMS = [
-  "Corinthians",
-  "Palmeiras",
-  "São Paulo",
-  "Santos",
-  "Flamengo",
-  "Vasco",
-  "Fluminense",
+  "Atlético-MG",
+  "Bahia",
   "Botafogo",
+  "Ceará",
+  "Corinthians",
+  "Cruzeiro",
+  "Flamengo",
+  "Fluminense",
+  "Fortaleza",
   "Grêmio",
   "Internacional",
-  "Atlético Mineiro",
-  "Cruzeiro",
+  "Juventude",
+  "Mirassol",
+  "Palmeiras",
+  "RB Bragantino",
+  "Santos",
+  "São Paulo",
+  "Sport",
+  "Vasco",
+  "Vitória",
 ];
 
 export function PersonalInfoFields({ formData, setFormData }: PersonalInfoFieldsProps) {
