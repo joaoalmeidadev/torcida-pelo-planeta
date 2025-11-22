@@ -125,7 +125,7 @@ export function VideoPlayer() {
 
   return (
     <div
-      className="group relative aspect-video w-full max-w-[380px] overflow-hidden rounded-[24px] border border-white/20 bg-black"
+      className="group relative aspect-9/16 w-full max-w-[380px] overflow-hidden rounded-[24px] border border-white/20 bg-black md:aspect-video"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
