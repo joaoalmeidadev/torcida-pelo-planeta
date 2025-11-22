@@ -10,9 +10,15 @@ interface ParticipationFormProps {
   formData: ParticipationFormData;
   setFormData: React.Dispatch<React.SetStateAction<ParticipationFormData>>;
   onSubmit: (e: React.FormEvent) => void;
+  isLoading?: boolean;
 }
 
-export function ParticipationForm({ formData, setFormData, onSubmit }: ParticipationFormProps) {
+export function ParticipationForm({
+  formData,
+  setFormData,
+  onSubmit,
+  isLoading,
+}: ParticipationFormProps) {
   const handleDownloadDocs = (e: React.MouseEvent) => {
     e.preventDefault();
 
@@ -61,7 +67,13 @@ export function ParticipationForm({ formData, setFormData, onSubmit }: Participa
           </label>
         </div>
 
-        <Button type="submit">Enviar</Button>
+        <Button
+          type="submit"
+          disabled={isLoading}
+          className="disabled:cursor-not-allowed disabled:opacity-50"
+        >
+          {isLoading ? "Enviando..." : "Enviar"}
+        </Button>
       </div>
     </form>
   );

@@ -3,6 +3,8 @@
 import * as React from "react";
 import { createPortal } from "react-dom";
 
+import { BACKEND_URL } from "@/constants/environments";
+import { RegistroMudaPayload } from "@/models";
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 
@@ -18,6 +20,7 @@ interface ParticipationModalProps {
 }
 
 export function ParticipationModal({ isOpen, onClose }: ParticipationModalProps) {
+  const [isLoading, setIsLoading] = React.useState(false);
   const [isSuccess, setIsSuccess] = React.useState(false);
   const [mounted, setMounted] = React.useState(false);
   const [formData, setFormData] = React.useState<ParticipationFormData>({
@@ -45,10 +48,44 @@ export function ParticipationModal({ isOpen, onClose }: ParticipationModalProps)
     };
   }, [isOpen]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Add validation if needed
-    setIsSuccess(true);
+
+    if (!formData.termsAccepted) {
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      const payload: RegistroMudaPayload = {
+        nome: formData.name,
+        email: formData.email,
+        time: formData.team,
+        instagram: formData.instagram,
+        nome_muda: formData.plantName,
+        termos: formData.termsAccepted,
+      };
+
+      const response = await fetch(`${BACKEND_URL}/registro-de-mudas`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ data: payload }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Erro ao enviar formulário");
+      }
+
+      setIsSuccess(true);
+    } catch (error) {
+      console.error("Erro ao enviar formulário:", error);
+      alert("Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleClose = () => {
@@ -112,6 +149,7 @@ export function ParticipationModal({ isOpen, onClose }: ParticipationModalProps)
                       formData={formData}
                       setFormData={setFormData}
                       onSubmit={handleSubmit}
+                      isLoading={isLoading}
                     />
                   )}
                 </Container>
