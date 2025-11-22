@@ -128,7 +128,7 @@ export default function Home() {
           </div>
 
           <motion.div
-            className="mt-4 hidden w-[580px] justify-end lg:flex"
+            className="mt-4 hidden w-[580px] items-center justify-end gap-6 lg:flex"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.4, duration: 0.8 }}
@@ -142,6 +142,20 @@ export default function Home() {
             >
               Doe Agora!
             </a>
+            <div className="flex flex-col items-center gap-2">
+              <Image
+                src="/qr-code.svg"
+                alt="QR Code para doação"
+                width={90}
+                height={90}
+                className="rounded-md object-contain"
+              />
+              <p className="max-w-[100px] text-center text-xs leading-tight text-white">
+                Aponte o celular
+                <br />
+                para o QRCODE
+              </p>
+            </div>
           </motion.div>
         </div>
 
