@@ -13,6 +13,24 @@ interface ParticipationFormProps {
 }
 
 export function ParticipationForm({ formData, setFormData, onSubmit }: ParticipationFormProps) {
+  const handleDownloadDocs = (e: React.MouseEvent) => {
+    e.preventDefault();
+
+    const files = [
+      "/POLÍTICA DE PRIVACIDADE – CAMPANHA TORCIDA PELO PLANETA.pdf",
+      "/TERMOS DE USO – CAMPANHA TORCIDA PELO PLANETA.pdf",
+    ];
+
+    files.forEach((file) => {
+      const link = document.createElement("a");
+      link.href = file;
+      link.download = file.split("/").pop() || "documento.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  };
+
   return (
     <form onSubmit={onSubmit} className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
       <PersonalInfoFields formData={formData} setFormData={setFormData} />
@@ -36,9 +54,10 @@ export function ParticipationForm({ formData, setFormData, onSubmit }: Participa
           />
           <label
             htmlFor="terms"
-            className="text-brand-green cursor-pointer text-sm font-bold underline"
+            className="text-brand-green cursor-pointer text-sm font-bold"
+            onClick={handleDownloadDocs}
           >
-            Li e aceito o Regulamento e Política de Privacidade
+            Li e aceito o <span className="underline">Regulamento e Política de Privacidade</span>
           </label>
         </div>
 
