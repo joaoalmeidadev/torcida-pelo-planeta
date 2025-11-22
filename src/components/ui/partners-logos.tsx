@@ -1,14 +1,22 @@
 import Image from "next/image";
 
-export function PartnersLogos() {
+import { cn } from "@/lib/cn";
+
+interface PartnersLogosProps {
+  className?: string;
+  width?: number;
+  height?: number;
+}
+
+export function PartnersLogos({ className, width = 349, height = 120 }: PartnersLogosProps) {
   return (
     <Image
       src="/partners-logos.svg"
       alt="Logos dos parceiros"
       aria-hidden="true"
-      width={349}
-      height={120}
-      className="pointer-events-none mt-16 object-contain"
+      width={width}
+      height={height}
+      className={cn("pointer-events-none object-contain", className)}
     />
   );
 }

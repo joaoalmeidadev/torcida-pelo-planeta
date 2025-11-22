@@ -8,7 +8,7 @@ export function PrizeShowcase() {
       aria-hidden="true"
       width={425}
       height={301}
-      className="pointer-events-none object-contain"
+      className="pointer-events-none hidden object-contain lg:block"
     />
   );
 }

@@ -10,7 +10,7 @@ export function ParticipationTrigger() {
 
   return (
     <>
-      <Button className="max-w-[360px]" onClick={() => setIsModalOpen(true)}>
+      <Button className="mx-auto md:max-w-[360px] lg:mx-0" onClick={() => setIsModalOpen(true)}>
         Clique e participe
       </Button>
 
