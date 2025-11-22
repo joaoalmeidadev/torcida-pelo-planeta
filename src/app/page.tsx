@@ -22,13 +22,15 @@ export default function Home() {
   return (
     <div className="flex w-full flex-col">
       <section className="bg-brand-green relative flex h-[400px] w-full flex-col items-center justify-between overflow-hidden lg:h-screen lg:min-h-[600px]">
-        <div
-          className="absolute inset-0 z-10 opacity-60 mix-blend-multiply"
-          style={{
-            background:
-              "url('/background-1.png') lightgray 0px -232.092px / 100% 138.697% no-repeat",
-          }}
-        />
+        <div className="absolute inset-0 z-10 opacity-60 mix-blend-multiply">
+          <Image
+            src="/background-1.png"
+            alt=""
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </div>
 
         <div className="absolute -top-[311px] right-16 z-0 h-[860px] w-[888px] shrink-0 rounded-[888px] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,0,0.54)_0%,rgba(1,131,69,0.00)_100%)]" />
 
@@ -65,10 +67,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative z-10 flex h-full w-full flex-1 flex-col justify-between p-6 md:justify-center md:p-12">
-          <div className="flex flex-1 flex-col justify-start pt-8 md:flex-none md:justify-center md:pt-0">
+        <div className="relative z-10 flex h-full w-full flex-1 flex-col justify-between p-6 lg:justify-center lg:p-12">
+          <div className="flex flex-1 flex-col justify-start pt-8 lg:flex-none lg:justify-center lg:pt-0">
             <motion.div
-              className="relative h-32 w-64 md:h-64 md:w-[580px]"
+              className="relative h-32 w-64 lg:h-64 lg:w-[580px]"
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.2, delay: 0.3 }}
@@ -83,9 +85,9 @@ export default function Home() {
             </motion.div>
           </div>
 
-          <div className="mb-8 flex flex-col gap-3 md:mb-0 md:w-[580px] md:flex-col-reverse md:items-end">
+          <div className="mb-8 flex flex-col gap-3 lg:mb-0 lg:w-[580px] lg:flex-col-reverse lg:items-end">
             <motion.p
-              className="text-[10px] font-bold text-white uppercase md:text-right md:text-lg"
+              className="text-[10px] font-bold text-white uppercase lg:text-right lg:text-lg"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1 }}
@@ -93,7 +95,7 @@ export default function Home() {
               Ação Oficial: CBF / Taça dos Povos Indígenas / Paraquemdoar
             </motion.p>
             <motion.div
-              className="relative h-12 w-48 md:h-20 md:w-80"
+              className="relative h-12 w-48 lg:h-20 lg:w-80"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.8 }}
@@ -103,7 +105,7 @@ export default function Home() {
                 alt="Parceiros"
                 width={305}
                 height={91}
-                className="object-contain object-left md:object-right"
+                className="object-contain object-left lg:object-right"
               />
             </motion.div>
           </div>
